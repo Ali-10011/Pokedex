@@ -4,17 +4,29 @@ import { useState } from "react";
 
 //Pass Parameter into Home Page, store current url somewhere and pass next url into this
 const Home = () => {
-    const { error, isPending, data: pokeData } = useFetch('https://pokeapi.co/api/v2/pokemon/')
-    return ( 
-        <div className="home">
-      { error && <div>{ error }</div> }
-      { isPending && <div>Loading...</div> }
-      { pokeData && 
-      <div><PokeList pokelist = {pokeData.results}/> </div>  
-       }
+  var url = 'https://pokeapi.co/api/v2/pokemon/';
+  const [pokeurl, setPokeurl] = useState(url);
+  const { error, isPending, data: pokeData } = useFetch(pokeurl)
+  
+  return (
+    <div>
+    <div className="home">
+      {error && <div>{error}</div>}
+      {isPending && <div>Loading...</div>}
+      {pokeData &&
+        <div>
+          <PokeList pokelist={pokeData.results} /> </div>
+      }  
     </div>
-     );
+    
+       <button onClick={() => { setPokeurl(pokeData.previous)
+         }}> Back</button>
+      <button onClick={() => {
+        setPokeurl(pokeData.next)
+      }}> Next</button> 
+    </div>
+  );
 }
 
- 
+
 export default Home;
