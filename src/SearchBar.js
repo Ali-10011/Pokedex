@@ -1,21 +1,24 @@
 import { useState } from "react";
 import useFetch from "./useFetch";
 const SearchBar = () => {
-   
-    const [pokemon, setpokemon] = useState();
-
+  
+  var url = 'https://pokeapi.co/api/v2/pokemon/1';
+  const [pokeurl, setPokeurl] = useState(url);
+  const [data, setData] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();    
-        fetch('https://pokeapi.co/api/v2/pokemon/' + pokemon) //if an unmounted dom object is called 
+        fetch(pokeurl) //if an unmounted dom object is called 
       .then(res => {
         if (!res.ok) { // error coming back from server
           throw Error('could not fetch the data from server');
-        } 
+        }
+        
         return res.json();
       })
       .then(res =>
         {
+            setData(res);
             console.log(res);
         }
       )
@@ -26,12 +29,12 @@ const SearchBar = () => {
         <input 
           type="text" 
           required
-          value = {pokemon}
-          onChange = {(e) =>  setpokemon(e.target.value) }
+            onChange={(e) => setPokeurl('https://pokeapi.co/api/v2/pokemon/' + e.target.value.toString()) }
         />
         <button>Search</button>
       </form>
-     
+        {data && <div> {data.name} </div>}
+        
       </div>
      );
       }
