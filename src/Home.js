@@ -19,11 +19,12 @@ const Home = () => {
       }  
     </div>
     
-       <button onClick={() => { setPokeurl(pokeData.previous)
+       <button disabled={!pokeData?.previous} onClick={() => { setPokeurl(pokeData.previous)
          }}> Back</button>
-      <button onClick={() => {
+      <button disabled={!pokeData?.next} onClick={() => {
         setPokeurl(pokeData.next)
-      }}> Next</button> 
+      }}> Next</button>
+
     </div>
   );
 }
