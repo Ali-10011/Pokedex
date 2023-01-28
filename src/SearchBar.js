@@ -1,18 +1,19 @@
 import { useState } from "react";
 import useFetch from "./useFetch";
+import { PokeInfo } from "./PokeInfo";
 const SearchBar = () => {
   //SPREAD OPERATOR
-  const url = 'https://pokeapi.co/api/v2/pokemon/pikachu';
 
-  const [pokeurl, setPokeurl] = useState(url);
+  const [pokeurl, setPokeurl] = useState(process.env.REACT_APP_POKEURL + 'pikachu');
   //const [searchItem, setSearchItem] = useState({error: null, isPending: null, pokeData: null});
   const { error, isPending, data: pokeData } = useFetch(pokeurl)
   //setSearchItem({ error, isPending, data: pokeData })
   
     const handleSubmit = (searchPoke) => {
       //e.preventDefault();
-      console.log(searchPoke); //e is event object, which DOM element fires event
-      setPokeurl('https://pokeapi.co/api/v2/pokemon/' + searchPoke)
+      //console.log(searchPoke); //e is event object, which DOM element fires event
+      
+      setPokeurl(process.env.REACT_APP_POKEURL + searchPoke)
       //const { error, isPending, data: pokeData } = useFetch(pokeurl)
       //setSearchItem({ error, isPending, data: pokeData })
       }
@@ -33,7 +34,7 @@ const SearchBar = () => {
         {error && <div>{error}</div>}
         {isPending && <div>Loading...</div>}
         {pokeData &&
-          <div>{pokeData.name}</div>
+          <div><PokeInfo  pokeinfo = {pokeData} /></div>
         } 
         
       </div>
