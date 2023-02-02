@@ -44,42 +44,6 @@ export const PokeInfo = (props) => {
         </div>
       </div>
 
-      {/* <table class="table table-bordered text-center">
-        <tbody>
-          <tr>
-            <th scope="row">
-              <h2>ID</h2>{" "}
-            </th>
-            <td>
-              <h3>{props.pokeinfo.id}</h3>
-            </td>
-
-            <th scope="row">
-              <h2>Name</h2>
-            </th>
-            <td>
-              <h3>{props.pokeinfo.name}</h3>
-            </td>
-          </tr>
-
-          <tr>
-            <th scope="row">
-              <h2>Types</h2>
-            </th>
-            <td>
-              {props.pokeinfo.types.map((pokemon) => {
-                return <h3>{pokemon.type.name}</h3>;
-              })}
-            </td>
-            <th scope="row">
-              <h2>Weight</h2>
-            </th>
-            <td>
-              <h3>{props.pokeinfo.weight + " lbs"} </h3>
-            </td>
-          </tr>
-        </tbody>
-      </table> */}
     </div>
   );
 };
