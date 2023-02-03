@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const PokeItem = (props) => {
   const name = props.pokemon.name;
@@ -47,7 +48,9 @@ export const PokeItem = (props) => {
     <div className="col-md-3 text-center">
       <img src={props.imgurl} />
 
-      <h2>{props.pokemon.name}</h2>
+      <Link to ={`/pokemon/${props.pokemon.name}`}>
+        <h2>{props.pokemon.name}</h2>
+      </Link>
 
       <button
         disabled={btnStatus}

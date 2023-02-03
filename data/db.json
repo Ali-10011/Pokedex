@@ -116,11 +116,6 @@
       "url": "https://pokeapi.co/api/v2/pokemon/45/"
     },
     {
-      "id": 42,
-      "name": "golbat",
-      "url": "https://pokeapi.co/api/v2/pokemon/42/"
-    },
-    {
       "id": 43,
       "name": "oddish",
       "url": "https://pokeapi.co/api/v2/pokemon/43/"

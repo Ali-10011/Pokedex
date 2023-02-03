@@ -4,6 +4,7 @@ import Home from "./Home";
 import SearchBar from "./SearchBar";
 import Favorites from "./Favorites";
 import FavInfo  from "./FavInfo";
+import PokeInfo from "./PokeInfo";
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Route exact path="/search" element={<SearchBar />} />
         <Route exact path="/favorites" element={<Favorites />} />
         <Route exact path="/favorites/:name" element={<FavInfo />} />
-      
+        <Route exact path="/pokemon/:name" element={<FavInfo />} />
       </Routes>
     </div>
   );

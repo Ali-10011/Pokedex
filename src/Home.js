@@ -10,21 +10,40 @@ const Home = () => {
   
   return (
     <div>
-    <div className="home">
-      {error && <div>{error}</div>}
-      {isPending && <div>Loading...</div>}
-      {pokeData &&
-        <div>
-          <PokeList pokelist={pokeData.results} /> </div>
-      }  
-    </div>
-    
-       <button disabled={!pokeData?.previous} onClick={() => { setPokeurl(pokeData.previous)
-         }}> Back</button>
-      <button disabled={!pokeData?.next} onClick={() => {
-        setPokeurl(pokeData.next)
-      }}> Next</button>
+      <div className="home">
+        {error && <div>{error}</div>}
+        {isPending && <div>Loading...</div>}
+        {pokeData && (
+          <div>
+            <PokeList pokelist={pokeData.results} />{" "}
+          </div>
+        )}
+      </div>
 
+      <div className="text-center">
+        <button
+          disabled={!pokeData?.previous}
+          onClick={() => {
+            setPokeurl(pokeData.previous);
+          }}
+          type="button"
+          className="btn border btn-lg me-3 my-3 btn-outline-primary  "
+        >
+          {" "}
+          Back
+        </button>
+        <button
+          disabled={!pokeData?.next}
+          onClick={() => {
+            setPokeurl(pokeData.next);
+          }}
+          type="button"
+          className="btn border btn-lg me-3 my-3 btn-danger btn-outline-light"
+        >
+          {" "}
+          Next
+        </button>
+      </div>
     </div>
   );
 }

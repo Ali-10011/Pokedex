@@ -31,7 +31,7 @@ const Favorites = () => {
           return (
             <div className="col-md-3 text-center" >
               <FavItem props={pokemon} />
-              <button onClick={() => handleClick(pokemon)}>Remove</button>
+              <button className = "btn btn-danger btn-outline-light" btn-danger btn-outline-light onClick={() => handleClick(pokemon)}>Remove</button>
             </div>
           );
         })}
