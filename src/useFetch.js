@@ -14,7 +14,16 @@ const useFetch = (url) => {
       fetch(url, { signal: abortCont.signal }) //if an unmounted dom object is called 
       .then(res => {
         if (!res.ok) { // error coming back from server
-          throw Error('could not fetch the data from server');
+          console.log(res)
+          if(res.status == 404)
+          {
+            throw Error("This pokemon doesn't exist, Enter a Valid Name and try again");
+          }
+          else 
+          {
+              throw Error("could not fetch the data from server");
+          }
+          
         } 
         return res.json();
       })

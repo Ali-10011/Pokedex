@@ -6,21 +6,27 @@ const Navbar = () => {
       <img src={logo} width={407} height={150} />
       <div>
         <Link className="mx-2" to="/" style={{ textDecoration: "none" }}>
-          Home
+          <button className="btn border btn-md mx-1 my-1 btn-danger btn-outline-light">
+            Home
+          </button>
         </Link>
         <Link
           className="mx-2"
           to="/favorites"
           style={{ textDecoration: "none" }}
         >
-          Favorite
+          <button className="btn border btn-md mx-1 my-1 btn-danger btn-outline-light">
+            Favorite
+          </button>
         </Link>
         <Link
           className="mx-2 no-underline"
           to="/search"
           style={{ textDecoration: "none" }}
         >
-          Search
+          <button className="btn border btn-md  mx-1  my-1 btn-danger btn-outline-light">
+            Search
+          </button>
         </Link>
       </div>
     </nav>
