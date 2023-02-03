@@ -31,11 +31,6 @@
       "url": "https://pokeapi.co/api/v2/pokemon/11/"
     },
     {
-      "id": 15,
-      "name": "beedrill",
-      "url": "https://pokeapi.co/api/v2/pokemon/15/"
-    },
-    {
       "id": 16,
       "name": "pidgey",
       "url": "https://pokeapi.co/api/v2/pokemon/16/"
@@ -96,11 +91,6 @@
       "url": "https://pokeapi.co/api/v2/pokemon/21/"
     },
     {
-      "id": 22,
-      "name": "fearow",
-      "url": "https://pokeapi.co/api/v2/pokemon/22/"
-    },
-    {
       "id": 24,
       "name": "arbok",
       "url": "https://pokeapi.co/api/v2/pokemon/24/"
@@ -124,6 +114,21 @@
       "id": 4,
       "name": "charmander",
       "url": "https://pokeapi.co/api/v2/pokemon/4/"
+    },
+    {
+      "id": 5,
+      "name": "charmeleon",
+      "url": "https://pokeapi.co/api/v2/pokemon/5/"
+    },
+    {
+      "id": 1,
+      "name": "bulbasaur",
+      "url": "https://pokeapi.co/api/v2/pokemon/1/"
+    },
+    {
+      "id": 26,
+      "name": "raichu",
+      "url": "https://pokeapi.co/api/v2/pokemon/26/"
     }
   ]
 }

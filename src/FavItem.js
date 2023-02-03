@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 const FavItem = ({props}) => {
     console.log(props)
   return (
-    <div >
+    <div>
       <img src={process.env.REACT_APP_SPRITEURL + props.id + ".png"} />
-      <Link to  = {`/favorites/${props.name}`}>
+      <Link style={{ textDecoration: "none" }} to={`/favorites/${props.name}`}>
         <h2>{props.name}</h2>
       </Link>
     </div>

@@ -48,7 +48,10 @@ export const PokeItem = (props) => {
     <div className="col-md-3 text-center">
       <img src={props.imgurl} />
 
-      <Link to ={`/pokemon/${props.pokemon.name}`}>
+      <Link
+        style={{ textDecoration: "none" }}
+        to={`/pokemon/${props.pokemon.name}`}
+      >
         <h2>{props.pokemon.name}</h2>
       </Link>
 
