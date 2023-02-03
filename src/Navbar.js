@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from "./img/logo.png";
+
 const Navbar = () => {
   return (
     <nav className="">
       <div className="text-center ">
-        <img src={logo} width={407} height={150} />
+        <img src={logo} width={407} height={150} alt="Pokemon logo" />
       </div>
       <div className="position-absolute top-0 end-0">
         <Link className="mx-2" to="/" style={{ textDecoration: "none" }}>

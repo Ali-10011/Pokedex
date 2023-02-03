@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useFetch from "./useFetch";
 import { PokeInfo } from "./PokeInfo";
+
 const SearchBar = () => {
   //SPREAD OPERATOR
 
