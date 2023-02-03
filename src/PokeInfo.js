@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+
 
 export const PokeInfo = (props) => {
   return (
@@ -47,3 +47,5 @@ export const PokeInfo = (props) => {
     </div>
   );
 };
+
+export default PokeInfo;

@@ -1,28 +1,23 @@
 import Navbar from "./Navbar";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from "./Home";
 import SearchBar from "./SearchBar";
 import Favorites from "./Favorites";
+import FavInfo  from "./FavInfo";
+
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route exact path='/search' >
-            <SearchBar />
-          </Route>
-          <Route exact path='/favorites' >
-            <Favorites />
-          </Route>
-          
-        </Switch>
-      </div>
-    </Router >
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/search" element={<SearchBar />} />
+        <Route exact path="/favorites" element={<Favorites />} />
+        <Route exact path="/favorites/:name" element={<FavInfo />} />
+      
+      </Routes>
+    </div>
   );
 }
 

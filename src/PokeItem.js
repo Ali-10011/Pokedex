@@ -22,11 +22,18 @@ export const PokeItem = (props) => {
     };
 
     return (
-        (<div className='col-md-3 text-center'>
-            <img src={props.imgurl} />
-
-            <h2>{props.pokemon.name}</h2>
-            <button onClick = {()=>{handleSubmit()}} >Add to Favorites</button>
-        </div>)
-    )
+      <div className="col-md-3 text-center">
+        <img src={props.imgurl} />
+        
+          <h2>{props.pokemon.name}</h2>
+   
+        <button
+          onClick={() => {
+            handleSubmit();
+          }}
+        >
+          Add to Favorites
+        </button>
+      </div>
+    );
 }

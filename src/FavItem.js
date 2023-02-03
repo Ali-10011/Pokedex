@@ -1,20 +1,18 @@
 import React from 'react'
-import useFetch from "./useFetch";
-import { PokeInfo } from "./PokeInfo";
+import { Link } from 'react-router-dom';
+
+
 
 const FavItem = ({props}) => {
-    const { error, isPending, data: pokeData } = useFetch(props.url);
+    console.log(props)
   return (
-    <div>
-      {error && <div>{error}</div>}
-      {isPending && <div>Loading...</div>}
-      {pokeData && (
-        <div>
-          <PokeInfo pokeinfo={pokeData} />
-        </div>
-      )}
+    <div className="col-md-3 text-center">
+      <img src={process.env.REACT_APP_SPRITEURL + props.id + ".png"} />
+      <Link to  = {`/favorites/${props.name}`}>
+        <h2>{props.name}</h2>
+      </Link>
     </div>
   );
 }
 
-export default FavItem
+export default FavItem;

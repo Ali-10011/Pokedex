@@ -1,23 +1,21 @@
 import React from 'react'
 import useFetch from "./useFetch";
-import PokeList from "./PokeList";
-import { useState } from "react";
+import FavItem from './FavItem';
+
 
 const Favorites = () => {
   
-  const { error, isPending, data: pokeData } = useFetch("http://localhost:8000/favorites");
-  {
-    console.log(pokeData);
-  }
+  const { error, isPending, data: pokeData } = useFetch("http://localhost:8000/favorites")
   return (
-    <div className="home">
+    <div className="container row">
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
-      {pokeData && (
-        <div>
-          <PokeList pokelist={pokeData} />{" "}
-        </div>
-      )}
+
+      {pokeData &&
+        pokeData.map((pokemon) => {
+          return(
+          <FavItem props={pokemon} />);
+        })}
     </div>
   );
 }
