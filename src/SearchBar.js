@@ -5,17 +5,13 @@ const SearchBar = () => {
   //SPREAD OPERATOR
 
   const [pokeurl, setPokeurl] = useState(process.env.REACT_APP_POKEURL + 'pikachu');
-  //const [searchItem, setSearchItem] = useState({error: null, isPending: null, pokeData: null});
+
   const { error, isPending, data: pokeData } = useFetch(pokeurl)
-  //setSearchItem({ error, isPending, data: pokeData })
-  
+
     const handleSubmit = (searchPoke) => {
-      //e.preventDefault();
-      //console.log(searchPoke); //e is event object, which DOM element fires event
-      
+
       setPokeurl(process.env.REACT_APP_POKEURL + searchPoke)
-      //const { error, isPending, data: pokeData } = useFetch(pokeurl)
-      //setSearchItem({ error, isPending, data: pokeData })
+     
       }
       
     return ( 

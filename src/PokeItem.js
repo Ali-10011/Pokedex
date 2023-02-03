@@ -1,14 +1,14 @@
 import React from 'react'
+import { useState } from "react";
+
 export const PokeItem = (props) => {
-    
+ console.log(props)
+  //const btnColor = props.IsFav == "true" ? "btn btn-light" : "btn btn-danger";
+ // const [colorState, setColor] = useState();
     const handleSubmit = () => {
-      //e.preventDefault();
       const name = props.pokemon.name
+      const id = props.id
       const url = props.pokemon.url
-        var URL = url;
-        let result = URL.replace("https://pokeapi.co/api/v2/pokemon/", "");
-       let pokeID = result.substr(0, result.length - 1);
-       let id = parseInt(pokeID)
       const favPoke = {id, name, url};
       
         console.log(favPoke)
@@ -16,20 +16,20 @@ export const PokeItem = (props) => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(favPoke),
-      }).then((value) => {
-        console.log(value);
       });
     };
 
     return (
       <div className="col-md-3 text-center">
         <img src={props.imgurl} />
-        
-          <h2>{props.pokemon.name}</h2>
-   
+
+        <h2>{props.pokemon.name}</h2>
+
         <button
+          type="button"
+          class="btn btn-light"
           onClick={() => {
-            handleSubmit();
+            //handleSubmit();
           }}
         >
           Add to Favorites

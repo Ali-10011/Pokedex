@@ -4,8 +4,8 @@ import { useState } from "react";
 
 //Pass Parameter into Home Page, store current url somewhere and pass next url into this
 const Home = () => {
-  var url = 'https://pokeapi.co/api/v2/pokemon/';
-  const [pokeurl, setPokeurl] = useState(url);
+ 
+  const [pokeurl, setPokeurl] = useState(process.env.REACT_APP_POKEURL);
   const { error, isPending, data: pokeData } = useFetch(pokeurl)
   
   return (

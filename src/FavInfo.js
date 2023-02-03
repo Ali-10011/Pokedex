@@ -4,8 +4,9 @@ import { PokeInfo } from "./PokeInfo";
 
 const FavInfo = () => {
 
-    const {name} = useParams()
+  const {name} = useParams()
   const { error, isPending, data: pokeData } = useFetch(process.env.REACT_APP_POKEURL + name);
+  
  return (
    <div>
      {error && <div>{error}</div>}
