@@ -54,6 +54,76 @@
       "id": 9,
       "name": "blastoise",
       "url": "https://pokeapi.co/api/v2/pokemon/9/"
+    },
+    {
+      "id": 38,
+      "name": "ninetales",
+      "url": "https://pokeapi.co/api/v2/pokemon/38/"
+    },
+    {
+      "id": 13,
+      "name": "weedle",
+      "url": "https://pokeapi.co/api/v2/pokemon/13/"
+    },
+    {
+      "id": 18,
+      "name": "pidgeot",
+      "url": "https://pokeapi.co/api/v2/pokemon/18/"
+    },
+    {
+      "id": 37,
+      "name": "vulpix",
+      "url": "https://pokeapi.co/api/v2/pokemon/37/"
+    },
+    {
+      "id": 14,
+      "name": "kakuna",
+      "url": "https://pokeapi.co/api/v2/pokemon/14/"
+    },
+    {
+      "id": 2,
+      "name": "ivysaur",
+      "url": "https://pokeapi.co/api/v2/pokemon/2/"
+    },
+    {
+      "id": 6,
+      "name": "charizard",
+      "url": "https://pokeapi.co/api/v2/pokemon/6/"
+    },
+    {
+      "id": 7,
+      "name": "squirtle",
+      "url": "https://pokeapi.co/api/v2/pokemon/7/"
+    },
+    {
+      "id": 21,
+      "name": "spearow",
+      "url": "https://pokeapi.co/api/v2/pokemon/21/"
+    },
+    {
+      "id": 22,
+      "name": "fearow",
+      "url": "https://pokeapi.co/api/v2/pokemon/22/"
+    },
+    {
+      "id": 24,
+      "name": "arbok",
+      "url": "https://pokeapi.co/api/v2/pokemon/24/"
+    },
+    {
+      "id": 45,
+      "name": "vileplume",
+      "url": "https://pokeapi.co/api/v2/pokemon/45/"
+    },
+    {
+      "id": 42,
+      "name": "golbat",
+      "url": "https://pokeapi.co/api/v2/pokemon/42/"
+    },
+    {
+      "id": 43,
+      "name": "oddish",
+      "url": "https://pokeapi.co/api/v2/pokemon/43/"
     }
   ]
 }
