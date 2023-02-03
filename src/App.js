@@ -5,11 +5,21 @@ import SearchBar from "./SearchBar";
 import Favorites from "./Favorites";
 import FavInfo  from "./FavInfo";
 import PokeInfo from "./PokeInfo";
+import background from "./img/bg.png";
+
 
 
 function App() {
+  const myStyle = {
+     
+    backgroundColor: "black",
+   
+    
+    backgroundSize: "fill",
+    backgroundRepeat: "repeat",
+  };
   return (
-    <div className="App">
+    <div className="App" style = {myStyle}>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />

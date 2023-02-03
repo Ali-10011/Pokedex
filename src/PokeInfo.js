@@ -33,8 +33,8 @@ export const PokeInfo = (props) => {
               return <h6>{pokemon.type.name}</h6>;
             })}
           </div>
-          <div class="col">Height</div>
-          <div class="col">{props.pokeinfo.height + " ft"}</div>
+          <div class="col">Moves Count</div>
+          <div class="col">{props.pokeinfo.moves.length + " moves"}</div>
         </div>
         
       </div>
