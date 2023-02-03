@@ -12,9 +12,7 @@ import background from "./img/bg.png";
 function App() {
   const myStyle = {
      
-    backgroundColor: "black",
-   
-    
+    backgroundColor: "black",   
     backgroundSize: "fill",
     backgroundRepeat: "repeat",
   };
