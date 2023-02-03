@@ -1,13 +1,13 @@
-import useFetch from "./useFetch";
+import useFetch from "../services/useFetch";
 import PokeList from "./PokeList";
 import { useState } from "react";
 
 //Pass Parameter into Home Page, store current url somewhere and pass next url into this
 const Home = () => {
-  var url = 'https://pokeapi.co/api/v2/pokemon/';
+  var url = "https://pokeapi.co/api/v2/pokemon/";
   const [pokeurl, setPokeurl] = useState(url);
-  const { error, isPending, data: pokeData } = useFetch(pokeurl)
-  
+  const { error, isPending, data: pokeData } = useFetch(pokeurl);
+
   return (
     <div>
       <div className="home">
@@ -46,7 +46,6 @@ const Home = () => {
       </div>
     </div>
   );
-}
-
+};
 
 export default Home;

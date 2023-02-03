@@ -1,9 +1,9 @@
-import Navbar from "../Navbar";
+import Navbar from "../components/Navbar";
 import { Route, Routes } from "react-router-dom";
-import Home from "../Home";
-import SearchBar from "../SearchBar";
-import Favorites from "../Favorites";
-import FavInfo from "../FavInfo";
+import Home from "../views/Home";
+import SearchBar from "../components/SearchBar";
+import Favorites from "../views/Favorites";
+import FavInfo from "../components/FavInfo";
 
 function App() {
   const myStyle = {
